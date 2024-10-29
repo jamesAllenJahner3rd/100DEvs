@@ -34,7 +34,7 @@ body{
 }
 top{
   position: relative;
-  background-image: url('../img/bg.png') ;
+  background-image: url('../rainbow-badge/img/bg.png') ;
   width:100vw;
   height:100vw;
   z-index:0;
