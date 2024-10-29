@@ -1,0 +1,30 @@
+const gravity= 6.67 × 10−11
+const gravityUnit =N⋅kg−2⋅m2
+let grav2Objs function(){
+	arr_unit.foreach(element,index)(standandizeUnits,index)
+	standardizeUnits(index){
+		if( arr_unit[index]=== g or arr_unit[index]=== mm ){
+			arr_val[index]*=1000
+		}
+		if( arr_unit[index]=== mg or arr_unit[index]=== μm ){
+			arr_val[index]/=1000000
+		}
+		if( arr_unit[index]=== μg  ){
+			arr_val[index]/=1000000000
+		}
+		if( arr_unit[3]=== ft ){
+			arr_val[3]*=0.3048	
+		}
+		if( arr_unit[3]=== cm ){
+			arr_val[3]/=10	
+		}
+		if( arr_unit[index]=== lb ){
+			arr_val[index]*=0.453592	
+		}
+	}
+	arr_unit[0] ="kg"
+	arr_unit[1] ="kg"
+	arr_unit[3] ="m"
+
+	return string(gravity* arr_val[0]*arr_val[1]/(arr_val[2]*arr_val[2])) + gravityUnit
+}

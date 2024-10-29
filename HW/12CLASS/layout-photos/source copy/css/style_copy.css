@@ -1,0 +1,170 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html *,
+a {
+font:normal normal  12px/1.5rem "";
+color: gray;
+text-decoration: none;
+list-style: none;
+}
+.btn{
+  color: white;
+  background-color: rgb(36, 50, 68);
+  width:28px 64px;
+  padding: .15rem 1rem;
+}
+
+/* NAV small*/
+@media (max-width:815px){
+/* ul{display: none;} */
+ul{
+  background-color:rgb(62, 117, 117);
+  border-radius: 0 5px 5px 5px;
+  -webkit-border-radius: 0 5px 5px 5px;
+  -moz-border-radius: 0 5px 5px 5px;
+  -ms-border-radius: 0 5px 5px 5px;
+  -o-border-radius: 0 5px 5px 5px;
+  padding:0;
+  min-width:fit-content ;
+  text-align: justify;
+}
+
+
+nav h2{
+  margin: 0;
+}
+nav li:hover{
+  background:rgb(243, 243, 243);
+  border: 1px solid ;
+ }
+ nav li:hover a{
+  color: black;
+}
+nav li a:hover,nav li h2:hover{
+    color:black;
+}
+
+nav li{
+  margin:0 ;
+  background-color: green;
+  width: 100%;
+}
+
+
+
+
+
+
+}
+ /* NAV big*/
+@media (min-width:816px){
+   div button{
+    display: none;
+  }
+  header,
+  nav,
+  ul{
+    height: 30px;
+    padding-left: 0;
+    position: relative;
+  }
+  ul *,
+  li a{
+  float:left;
+  margin:0 .4rem; 
+  }
+  ul div{
+   position: absolute;
+  left:40%;
+   }
+   ul li:last-child{
+    float: right;
+    margin-right: 2rem;
+  }
+  ul li:first-child{
+    margin-left: 2rem;
+  }
+  ul li h2{
+    font-size: 1.5rem;
+  }
+ 
+}
+/* main small */
+ @media (max-width:815px){ 
+  main section{
+    
+    overflow-wrap:normal;
+    width: 100%;
+  }
+  h1{
+    
+    font:normal normal  bold 1.5rem/1.5rem "";
+    margin: 1% 0;
+  }
+  form *{
+    float: left;
+    width:100%;
+  }
+  form .btn{
+    text-align: center;
+
+  }
+main img{
+  width:100%;
+}
+
+
+}
+@media (min-width:815px){
+
+  main section  {
+    margin-top: 2rem;
+    width:30% ;
+    float: left;
+  }
+  section h1 {
+    width: 1000%;
+  }
+main img{
+  width: 50%;
+  float: left;
+  display: inline;
+}
+}
+/* footer Big*/
+
+@media (min-width:815px){
+article{
+  float: left;
+  width: 25%;
+}
+Article *{
+  line-height: .9rem;
+}
+article h4{
+  font-weight: bold;
+
+}
+}
+
+/* footer small*/
+@media (max-width:815px){
+
+ }

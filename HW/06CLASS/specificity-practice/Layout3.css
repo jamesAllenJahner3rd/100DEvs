@@ -1,0 +1,56 @@
+*{
+    box-sizing:border-box;
+     border: 1px solid black;
+     border-collapse: collapse;
+}
+
+
+/* Layout */
+header,
+footer{
+    height: 100px;
+     background: green;
+    clear:both;
+}
+section{
+    height: 350px;
+    background: rgb(128, 23, 0);
+    overflow: hidden;
+    max-width: 100%;
+}
+section>section{
+    float:left;
+    height: 350px;
+    background: rgb(94, 128, 0);
+    width:20%;
+}
+section{
+    max-width:100%;
+}
+section>section+section{
+    width:40%;
+    background: rgb(0, 102, 128);
+}
+
+section>section+section+section{
+    height: 350px;
+    background: rgb(94, 128, 0);
+    width:20%;
+}
+
+@media screen and (max-width:600px){
+    html> body > section section{
+        background: pink;
+        color:white;
+    }
+}
+@media (min-width:601px) and (max-width: 900px){
+    .tooThicc{
+        display: none;
+
+    }
+    section {
+        background:rgb(28, 166, 184);
+        min-width: 33.33%;
+    }
+}

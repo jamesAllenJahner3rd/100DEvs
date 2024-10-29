@@ -1,0 +1,111 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+section{
+  border: 1px solid black;
+}
+body {
+  
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/******************************************
+/* header
+/*******************************************/
+header {
+background-color: black;
+}
+li{
+  float:left;
+  width: 7.5%;
+  min-width: fit-content;
+  border: 1px solid gray;
+height: 30px;
+  margin: 0;
+  
+  list-style: none;
+}
+ul{
+  height: 30px;
+  
+}
+a{
+  color:white;
+  text-decoration: none;
+}
+select{
+  width: 100px;
+  color: white;
+}
+select{
+  background-color: black;
+}
+
+
+/******************************************
+/* Lead
+/*******************************************/
+h2{
+  float: left;
+}
+h2+h2{
+  float: right;
+}
+.main{
+  float: left;
+  height: 500px;
+  width:50%;
+  background:green;
+  position:relative;
+}
+div section>section{
+  width: 50%;
+  height: 250px;
+  position: relative;
+}
+.other section{
+  float:left;
+  width: 50%;
+  height: 250px;
+}
+.main div{
+position:absolute;
+bottom:1%;
+}
+
+/******************************************
+/* articals
+/*******************************************/
+.secondary{
+  position: relative;
+  float: left;
+  width: 32%;
+  height: 200px;
+  margin:.6%;
+}
+.secondary div{
+  bottom:10%;
+  position: absolute;
+}

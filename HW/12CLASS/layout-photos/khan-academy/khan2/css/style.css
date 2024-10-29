@@ -1,0 +1,105 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* Header
+/*******************************************/
+ul{
+  height:30px;
+  width: 33%;
+  border-bottom: 2px solid grey;
+  margin: 0;
+  float: Left;
+}
+li{
+  float: left;
+  width:20%;
+  list-style: none;
+}
+ul+ul li> img{
+  width: 200px;
+  
+
+}
+li select{
+  color: blue;
+  /* background-color: rgba(206, 207, 207, 0.584); */
+}
+li input{
+  background-color: rgba(206, 207, 207, 0.584);
+}
+li img{
+  height: 30px;
+  width: 100%;
+}
+select{
+  margin_right:10px;
+  border: none;
+}
+/******************************************
+/* Main
+/*******************************************/
+
+main section{
+  position: relative;
+  float:left;
+  width: 50%;
+}
+main section img{
+  position: absolute;
+  top: 50%;
+  width:70%;
+  right:0;
+}
+main section+section{
+  position: absolute;
+  right:0;
+  top:20%;
+  font-size: 1.2em;
+}
+.btn{
+  border: none;
+  width: 60%
+}
+.btn li{
+        float: left;
+        margin-left: 0;
+        margin-right:2%;
+        background-color: rgb(47, 124, 219);
+        border-radius: 3px;
+        width: 4.0em;
+        
+}
+section a{ text-decoration: none;
+    color:white;
+    
+  }
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

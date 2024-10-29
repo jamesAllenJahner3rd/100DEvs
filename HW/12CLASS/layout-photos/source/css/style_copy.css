@@ -1,0 +1,173 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html *,
+a {
+font:normal normal  12px/1.5rem "";
+color: gray;
+text-decoration: none;
+list-style: none;
+}
+.btn{
+  color: white;
+  background-color: rgb(36, 50, 68);
+  width:28px 64px;
+  padding: .15rem 1rem;
+}
+
+/* NAV small*/
+@media (max-width:815px){
+  ul div{
+    padding: 0;
+    margin: 0;
+  }
+  h2{
+    font-size: 1rem;
+    margin: 0;
+  }
+  div button{
+    border: none;
+    background-color: white;
+  }
+  .dropdown{
+    position: relative;
+      display: inline-block;
+  }
+  .dropdown-content{
+    display: none;
+    position:absolute;
+    min-width:100px;
+    background-color: antiquewhite;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  .dropdown-content li:hover{
+    border: 1px solid rgb(177, 162, 162);
+    background-color: rgb(177, 162, 162);
+    color:black;
+  }
+  .dropdown-content li:hover a,
+  .dropdown-content li:hover h2{
+    color: black; /* Targeting the <a> inside hovered <li> */
+  }
+  .dropdown-content a:hover {
+    color: inherit;
+  }/* Ensuring <a> retains the color set by parent <li> */
+  nav ul{
+  padding: 10px;
+  margin-top: 0;
+  }
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+}
+ /* NAV big*/
+@media (min-width:816px){
+   div button{
+    display: none;
+  }
+  header,
+  nav,
+  ul{
+    height: 30px;
+    padding-left: 0;
+    position: relative;
+  }
+  ul *,
+  li a{
+  float:left;
+  margin:0 .4rem; 
+  }
+  ul div{
+   position: absolute;
+  left:40%;
+   }
+   ul li:last-child{
+    float: right;
+    margin-right: 2rem;
+  }
+  ul li:first-child{
+    margin-left: 2rem;
+  }
+  ul li h2{
+    font-size: 1.5rem;
+  }
+ 
+}
+/* main small */
+ @media (max-width:815px){ 
+  main section{
+    
+    overflow-wrap:normal;
+    width: 100%;
+  }
+  h1{
+    
+    font:normal normal  bold 1.5rem/1.5rem "";
+    margin: 1% 0;
+  }
+  form *{
+    float: left;
+    width:100%;
+  }
+  form .btn{
+    text-align: center;
+
+  }
+main img{
+  width:100%;
+}
+
+
+}
+@media (min-width:815px){
+
+  main section  {
+    margin-top: 2rem;
+    width:30% ;
+    float: left;
+  }
+  section h1 {
+    width: 1000%;
+  }
+main img{
+  width: 50%;
+  float: left;
+  display: inline;
+}
+}
+/* footer Big*/
+
+@media (min-width:815px){
+article{
+  float: left;
+  width: 25%;
+}
+Article *{
+  line-height: .9rem;
+}
+article h4{
+  font-weight: bold;
+
+}
+}
+
+/* footer small*/
+@media (max-width:815px){
+
+ }

@@ -1,0 +1,246 @@
+/*
+==================================
+RESET
+==================================
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+==================================
+Html
+==================================
+*/
+@font-face{
+    font-family: "ReithSans";
+    src:
+    local("BBCReithSans_W_Rg"),
+    url("../resources/fonts/BBCReithSans_W_Rg.woff") format('woff');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    box-sizing:border-box;
+    font:  normal normal 14px/30px ReithSans;
+}
+article{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    border:0;
+}
+section{
+    text-align:center;
+}
+
+article p,
+h3{
+    text-align:left;
+   
+}
+article h3{
+    font-weight:600;
+}
+/*
+==================================
+Header
+==================================
+*/
+nav{
+    background: contain;
+    text-align: start;
+    position: relative;
+    z-index: 1000;
+    background-color:#000;
+    border-collapse:collapse;
+}
+nav tr{
+    background-clip: border-box;
+    height:1em;
+    line-height: 1em;
+}
+.signin_marker,
+.navLinks,
+.BBC_Logo{
+    
+    border:1px solid #666;
+    margin:0;
+    height:30px;
+}
+.BBC_Logo{
+    max-width:110px;
+    padding:6px 10px 6px 6px;
+    text-align:left;
+    margin:0;
+}
+.signin_marker {
+    min-width:100px;
+    max-width: 175px; /* Set the desired width here */
+    text-align: left;
+    padding:6px 90px 6px 6px;
+}
+.navLinks{
+     padding: 6px 22px 6px 22px ;
+    text-align:center;
+    width: auto;
+}
+
+
+a{
+    color:#FFF;
+    text-decoration: none;
+}
+select{
+    background-color:#000;
+    color:white;
+    text-align:left;
+    border:none;
+}
+
+.signin,
+marker{
+    box-sizing:border-box;
+    margin-left:0;
+    position:flex;
+}
+
+.aligndown{
+    vertical-align:bottom;
+}
+.inline {
+    display: flex;
+    justify-content: space-between; /* Aligns items on opposite sides */
+    align-items: center; /* Vertically centers the items */
+    width: 100%; /* Ensures it takes the full width of its container */
+}
+
+ .floatR{
+     padding:0 0 0 35em; 
+    text-align:right;
+
+
+}
+.font24{
+    font-size:24px;
+    line-height:100px;
+    font-weight:600;
+}
+.font30{
+    font-size:30px;
+    line-height:50px;
+    font-weight:600;
+}
+.font14{
+    font-size:16px;
+
+    /* line-height:100px; */
+    /* font-weight:600; */
+}
+.font18{
+    font-size:18px;
+    font-weight:400;
+}
+.font18B{
+    font-size:18px;
+    font-weight:600;
+}
+.txtgrey{
+    color:#8c8c8c;
+}
+.marginL{
+    margin-left:5px;
+
+}
+.marginR{
+    margin-right:5px;
+}
+input.search-field{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg") ;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size:14px;
+}
+.borderLred{
+    border-left:2px solid #F00;
+    text-align:justify;
+    padding:0;
+    margin:0;
+    /* background:green; */
+    line-height:14px;
+}
+.borderLblue{
+    border-left:2px solid #47a1d9;
+    text-align:justify;
+    padding:0;
+    margin:0;
+    line-height:14px;
+    /* background:rgba(0, 128, 0, 0.443); */
+}
+.third{
+    width:405px;
+
+}
+.relative{
+    position:relative;
+}
+.absolute_ISRAEL{
+    position:absolute;
+    top:210px;
+    left:5px;
+    color:#FFF;
+}
+
+.absolute_AMER{
+    position:absolute;
+    top:75px;
+    left:5px;
+    color:#FFF;
+    text-align:justify;
+   
+}

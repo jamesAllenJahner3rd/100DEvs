@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url(SourceSansPro-Regular.otf);
+}
+li{
+    color:blue;
+    text-decoration:underline;
+    font-size:15px;
+    background:gray;
+}
+section{
+    height: 300px;
+    background:#935ee8;
+    border: solid 5px gold;
+}
+h1{
+    font-size: 30px;
+    color: gold;
+    text-align: center;
+    font-family: SourceSansPro;
+}
+footer{
+    background-color: rgb(41, 28, 1);
+    height:300px;
+    width:70%;
+}
+h2{
+    text-decoration: line-through ;
+}

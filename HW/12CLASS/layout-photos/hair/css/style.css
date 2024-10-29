@@ -1,0 +1,405 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+font-size: 12px;
+}
+
+
+/******************************************
+/* Header
+/*******************************************/
+
+header a{
+ color: black;
+ text-decoration: none;
+}
+header li{
+  list-style-type: none;
+}
+nav > a{
+  float: right;
+  margin: 30px 1.11% ;
+}
+.btn{
+  background-color: black;
+  color: white;
+  font-size: .7rem;
+  text-decoration: none;
+  padding: .7rem;
+  margin: 1rem 7rem;
+  display: block;
+  width: 7rem;
+  box-shadow: 2px 2px 2px black ;
+}
+/* MAIN */
+/* MAIN */
+MAIN{
+  background-color: rgb(188, 179, 182);
+  height: 570px;
+}
+main h1{
+  margin: 0;
+  color: white;
+  font-weight: 100;
+  font-size: 4rem;
+  padding: 7rem 0 1rem 7rem ;
+}
+main span{
+  padding-left: 7rem;
+}
+.message{
+  color: white;
+  background-color: black;
+  position: absolute;
+  height: 12rem;
+  box-shadow: 2px 2px 2px black;
+  }
+  .message span{
+    display: block;
+      padding:  1rem 1rem ;
+      font-size: .7rem;
+      border-left: 3px solid white;
+     margin-top: 1rem;
+    }
+/* articles */
+/* articles */
+main +section{
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+}
+.notes{
+  position: relative;
+  float: left;
+  left: 50%;
+  padding-top: 5%;
+  transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  text-align:center;
+  height: 500px;
+}
+.notes article{
+  clear: both;
+  display: inline-block;
+}
+.notes i{
+  font-size: 56px;
+  height: 2rem;
+  width: 2rem;
+}
+.notes p{
+  
+  width: 15rem;
+}
+.join{
+  position: relative;
+  width: 100%;
+  background-color: rgb(238, 239, 239);
+  height: 300px;
+}
+.join section{
+  position: absolute;
+  height: 300px;
+  margin: 0 3rem 0 7rem ;
+  /* top: 0%; */
+}
+div {
+   width: 36%;
+  float:left;
+  margin: 2rem;
+}
+.join img{
+float:left;
+  width: 50%;
+  max-height: 300px;
+
+}
+/* CONTACTS */
+/* CONTACTS */
+.contacts{
+  position: relative;
+  height: 500px;
+  /* display: none; */
+}
+.contacts *{
+  max-height: 500px;
+}
+.contacts section{
+   position: absolute;
+   width: 100%;
+   margin: 0 50vw;
+   transform:translate(-25%,0%) ;
+   -webkit-transform:translate(-25%,0%) ;
+   -moz-transform:translate(-25%,0%) ;
+   -ms-transform:translate(-25%,0%) ;
+   -o-transform:translate(-25%,0%) ;
+}
+.contacts img{
+  max-height: 300px;
+}
+.contacts section >div{
+  width:230px ;
+  float: left;
+}
+.contacts div *{
+  display: block;
+  clear: both;
+}
+.contacts >div{
+  width: 100%;
+  height: 300px;
+  
+  /* margin: 0 % 0 1%; */
+  text-align: center;
+}
+.contacts .btn{
+  position: absolute;
+  width: 200px;
+  margin: 0 1rem;
+  top:85%;
+}
+/* COUPONS */
+/* COUPONS */
+.coupon{
+  position: relative;
+  height: 500px;
+  width: 70%;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  /* display: none; */
+
+}
+.coupon *{
+  max-height: 500px;
+}
+.coupon div{
+  position: absolute;
+  width: 100%;
+  bottom:20%;
+}
+.coupon .discount{
+  /* display: block; */
+  font-weight: 900;
+}
+.coupon br + span,
+.coupon span + span{
+  display: inline;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+.coupon .btn{
+  width: 150px;
+  margin: 1rem 0;
+}
+.coupon img{
+  height: 500px;
+  min-width: 100px;
+  
+}
+/* images */
+.images{
+height: 2000px;
+position: relative;
+width: 100%;
+}
+  .images section{ 
+    width: 100%;
+    height: 2000px;
+    margin: 0 20% 0 20%;
+  /*position: absolute;
+  left:50%;
+  transform: translate(-50%,0);
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0); */
+  /* height: 2000px; */
+
+}
+.images div{
+  max-height: 2001px;
+  width: 20%;
+  margin: 10% 5% 0 0;
+  
+}
+.images img {
+  max-height: 1350px;
+  max-width: 400px;
+  display: block;
+  margin: 1%;
+}
+h3{
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media(min-width:1280px){
+/* NAV */
+/* NAV */
+header{
+  background-color: rgb(255, 255, 255);
+  height: 80px ;
+  padding: 0;
+  margin: 0;
+  float: l;
+}
+nav{width: 100%;
+display: inline;
+float: left;
+}
+nav ul{
+  position: relative;
+  padding: 0;
+  margin: 0 1% 0 1% ;
+  width: auto;
+  float: left;
+  left: 0%;
+  /* transform: translate(-80%, 0) ;
+  -webkit-transform: translate(-80%, 0) ;
+  -moz-transform: translate(-80%, 0) ;
+  -ms-transform: translate(-80%, 0) ;
+  -o-transform: translate(-80%, 0) ; */
+}
+nav img{
+  display: inline;
+  float: left;
+}
+nav li{
+    margin:30px  2vw;
+
+    float: left;
+}
+
+/* MAIN */
+/* MAIN */
+.message{
+width: 12rem;
+left: 7rem;
+margin-top: 2rem;
+}
+.message .discount{
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  margin-top:0 ;
+  padding: 0;
+  display: inline;
+}
+.discount~span{
+  border: none;
+  display: inline;
+  padding:0;
+  margin: 0;
+}
+.block +span{
+  padding-left: 1rem;
+}
+main section .btn{
+  background-color: white;
+  color: black;
+  margin: 1rem;
+}
+.arrows{
+  position:absolute;
+  right: 5%;
+  top:75%;
+  width: 5rem;
+}
+.arrows i{
+  background-color: white;
+  border-radius:10rem ;
+  -webkit-border-radius:10rem ;
+  -moz-border-radius:10rem ;
+  -ms-border-radius:10rem ;
+  -o-border-radius:10rem ;
+  padding: 10%;
+  margin: 1%;
+  display: inline;
+}
+
+}
+@media(max-width:1279px){
+/* NAV */
+/* NAV */
+nav li{
+  display: none;
+  margin-top: 0;
+}
+nav ul{
+  padding: 0;
+  margin: 0px 40px;
+  width: 120px;
+  height: auto;
+  float: left;
+}
+nav img:hover ~ li,nav li:hover,nav:hover li{
+  display: block;
+}
+nav a{
+  margin-left: 40px;
+  float: left;
+}
+/* MAIN */
+/* MAIN */
+.message{
+width: 100vw;
+margin:  2rem 0 ;
+}
+.message .discount{
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  margin:0 1rem;
+  padding: 0;
+  display: inline;
+}
+.discount~span{
+  border: none;
+  display: inline;
+  padding:0;
+  margin: 0 ;
+}
+.block +span{
+  padding-left: 1rem;
+  display: block;
+}
+main section .btn{
+  background-color: white;
+  color: black;
+  margin: 1rem;
+
+
+}
+.arrows{
+ display: none;
+
+}
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
