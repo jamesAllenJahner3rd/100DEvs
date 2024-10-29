@@ -1,0 +1,109 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+top{
+  position: relative;
+  display: block;
+  
+/* menu{
+  background-color: aliceblue;
+  width:100 vw;
+  height:auto;
+  z-index: 2;
+  top: 51vh; */
+
+}
+body{
+  position: relative;
+  background-color: green;
+  font-size: 62.5%;
+ 
+  width:100vw ;
+  
+  /* background-size: cover; */
+  
+}
+top{
+  position: relative;
+  background-image: url('../img/d65wjxe-ed312de4-e5e1-43fd-8608-e5d95d2a5913.png.552778048b2dac204bcdcc3d001f8ffa.png.f0703a5b22892f16e1dcbd95b4c9292b.png') ;
+  width:100vw;
+  height:100vw;
+  z-index:0;
+  top: 0vh;
+  background-size:100vw auto;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+menu{
+  position: relative;
+  width:100vw;
+  height:100vw;
+  z-index:2;
+  top: -41vw;
+  background-size:100vw auto;
+  background-repeat: no-repeat;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+img{
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  overflow:auto;
+}
+#pokeImg1{
+  /* width: 10%;
+  height: 10%; */
+  scale: 8 ;
+  left: 19vw;
+  /* top: 27vh; */
+  top:45vw;
+}
+#pokeImg2{
+  left: 50vw;
+  top: -4vw;
+  width:50vw;
+  height: auto;
+  /* scale: 4 ; */
+}
+button{
+  font-size: 2rem;
+  background-color: aqua;
+  color:white;
+  text-shadow: 2px,2px,2px;
+  box-shadow: 2px,2px,2px;;
+  border-radius: 10 rem;
+}
+#pokeB1,#pokeB2{
+  
+  
+  text-transform: capitalize;
+}
+#winner{
+  di
+  position: relative;
+  left: 1vw;
+  top: 0vw;
+  width:50vw;
+  height: 2rem;
+  font-size: 3rem;
+  z-index: 20;
+  color: black;
+  background-color: green;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
