@@ -65,14 +65,21 @@ function twoSum(inputArray,num){
 }
 */
 function twoSum(inputArray,num){
-    console.log(inputArray,num);
     let output =[];
     //use map to keep track of the numbers
     let map = {};
     //loop through tohe numbers
     for(element of inputArray){
         //if the 4 - x = y, is y in the map?
-        if (map[num - element]){
+        (map[num - element])
+        // output the array that sums to 4
+        &&( output.push([num-element, element]) 
+        //mark that we used the y.
+        &&( map[num - element]--))
+         //if y isn't in the map, add x to the map till its' used.
+        ||(map[element] =1);
+    //which is the same as..
+        /* if (map[num - element]){
             // output the array that sums to 4
             output.push([num-element, element])
             //mark that we used the y.
@@ -81,7 +88,7 @@ function twoSum(inputArray,num){
             //if y isn't in the map, add x to the map till its' used.
             map[element] =1
         }
-        
+        */
     }
     console.log('the output:',output)
 }
