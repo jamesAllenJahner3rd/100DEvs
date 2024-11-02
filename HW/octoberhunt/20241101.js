@@ -51,19 +51,23 @@
 //     }); 
 // });
 /*
-this works------------------------------------------------------------
+
 function twoSum(inputArray,num){
+    console.log(inputArray,num);
     let output =[];
     inputArray.forEach((e,i,a)=>{
+        console.log([e,num-e])
         if (num%e ===0){
             if (a.includes(num-e)){
                 output.push([e,num-e])
+                console.log(output);
             }
         }
     })
     console.log(output)
 }
 */
+/* this works-----------------------------------
 function twoSum(inputArray,num){
     let output =[];
     //use map to keep track of the numbers
@@ -71,15 +75,7 @@ function twoSum(inputArray,num){
     //loop through tohe numbers
     for(element of inputArray){
         //if the 4 - x = y, is y in the map?
-        (map[num - element])
-        // output the array that sums to 4
-        &&( output.push([num-element, element]) 
-        //mark that we used the y.
-        &&( map[num - element]--))
-         //if y isn't in the map, add x to the map till its' used.
-        ||(map[element] =1);
-    //which is the same as..
-        /* if (map[num - element]){
+         if (map[num - element]){
             // output the array that sums to 4
             output.push([num-element, element])
             //mark that we used the y.
@@ -89,11 +85,41 @@ function twoSum(inputArray,num){
             map[element] =1
         }
         */
-    }
+ /*   }
     console.log('the output:',output)
 }
 twoSum([1,3, 2, 2, 3, 4], 5)
-
+*/
+function twoSum(inputArray,num){
+    summer = new SumFinder(inputArray,num);
+    console.log(summer.run())
+}
+class SumFinder{
+    constructor(inputArray,num){
+        this._output =[];
+        //use map to keep track of the numbers
+        this._map = {};
+        this._inputArray = inputArray;
+        this._num = num;
+    }
+    //loop through the numbers
+    run(){
+        for(let element of this._inputArray){
+            //if the 4 - x = y, is y in the map?
+            (this._map[this.sub(this._num,element)])
+            // output the array that sums to 4
+            &&( this._output.push([this._num-element, element]) 
+            //mark that we used the y.
+            &&( this._map[this.sub(this._num,element)]--))
+            //if y isn't in the map, add x to the map till its' used.
+            ||(this._map[element] =1);
+        }
+    return this._output
+    }
+    sub = (num1,num2) => num1 - num2;
+    
+}
+twoSum([1,3, 2, 2, 3, 4], 5)
 
 
 
