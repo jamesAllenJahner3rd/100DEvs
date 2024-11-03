@@ -84,8 +84,8 @@ function twoSum(inputArray,num){
             //if y isn't in the map, add x to the map till its' used.
             map[element] =1
         }
-        */
- /*   }
+        
+    }
     console.log('the output:',output)
 }
 twoSum([1,3, 2, 2, 3, 4], 5)
