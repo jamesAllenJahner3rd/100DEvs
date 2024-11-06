@@ -125,32 +125,38 @@ function twoSum(inputArray,num){
     summer = new SumFinder(inputArray,num);
     console.log(summer.run())
 }
-class SumFinder{
-    constructor(inputArray,num){
-        this._output =[];
-        //use map to keep track of the numbers
-        this._map = {};
-        this._inputArray = inputArray;
-        this._num = num;
-    }
-    //loop through the numbers
-    run(){
-        for(let element of this._inputArray){
-            //if the 4 - x = y, is y in the map?
-            (this._map[this.sub(this._num,element)])
-            // output the array that sums to 4
-            &&( this._output.push([this._num-element, element]) 
-            //mark that we used the y.
-            &&( this._map[this.sub(this._num,element)]--))
-            //if y isn't in the map, add x to the map till its' used.
-            ||(this._map[element] =1);
-        }
-    return this._output
-    }
-    sub = (num1,num2) => num1 - num2;
-}
+/*5. Max Character
+Given a string of characters, return the character that appears the most often.
 
-twoSum([1,2,3,4,5,5],4)
-// summer.run()
-// summer.run()
-// summer.run()
+describe("Max Character", () => {
+ it("Should return max character", () => {
+  assert.equal(max("Hello World!"), "l");
+ });
+});*/
+/*
+prep 
+parameter string
+return  char most common
+fffffffffffffff, f
+fffffssss   ss , s
+fff ddd ,fd
+loop through the string 
+    record  and count the char's
+return the char
+*/
+function max(Astring){
+    return new TheMost(Astring).run()
+}
+class TheMost {
+    constructor(aString){
+        this._string = aString;
+        this._map={};
+        //this._aString()
+    }
+    run(){
+        for(let letter of this._string){
+            this._map[letter] = this._map +1 ||1
+        }
+    }
+}
+max("sdlkf")
