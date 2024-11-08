@@ -52,11 +52,7 @@ class nthFibonacciFinder {
         this._number = number
     }
     run() {
-        let fibArray =[0,1]
-    let i = 2;
-    while (i <=this._number){
-        fibArray[i] = fibArray[i-1]+fibArray[i-2];
-        i++
+        this._number = nthFibonacci()
     }
     console.log(fibArray[this._number])
     return fibArray[this._number];
