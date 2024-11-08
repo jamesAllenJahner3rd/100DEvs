@@ -33,7 +33,7 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
  * return the last number
  * 
  */
-function nthFibonacci(number) {
+/*function nthFibonacci(number) {
     let fibArray =[0,1]
     let i = 2;
     while (i <=number){
@@ -42,5 +42,24 @@ function nthFibonacci(number) {
     }
     return fibArray[number];
 
+}*/
+function nthFibonacci(number) {
+    const nthFinder = new nthFibonacciFinder(number)
+    return nthFinder.run()
 }
-nthFibonacci(7);
+class nthFibonacciFinder {
+    constructor(number){
+        this._number = number
+    }
+    run() {
+        let fibArray =[0,1]
+    let i = 2;
+    while (i <=this._number){
+        fibArray[i] = fibArray[i-1]+fibArray[i-2];
+        i++
+    }
+    console.log(fibArray[this._number])
+    return fibArray[this._number];
+    }
+}
+nthFibonacci(0);
