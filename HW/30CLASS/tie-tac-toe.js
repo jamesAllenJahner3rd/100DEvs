@@ -50,6 +50,10 @@ class TicTacToe{
         if(this._running == false){
             this._running = true;
             console.log("You started this game");
+            do{
+                this.place(this.displayBoard().toString());
+                
+            }while(this._running == true)
         }
     }
     restart(){
@@ -67,21 +71,19 @@ class TicTacToe{
             console.log("You restarted this game")
         };
     }
-    displayBoard() {
-        console.log(` ${this.gameBoard['1a']} |${this.gameBoard['1b']} |${this.gameBoard['1c']} `);
-        console.log(` -----------`);
-        console.log(` ${this.gameBoard['2a']} |${this.gameBoard['2b']} |${this.gameBoard['2c']} `);
-        console.log(` -----------`);
-        console.log(` ${this.gameBoard['3a']} |${this.gameBoard['3b']} |${this.gameBoard['3c']} `);
-    }
-    set  place(square) {
+    displayBoard() {window.prompt( 
+       `        ${this.gameBoard['1a']} |${this.gameBoard['1b']} |${this.gameBoard['1c']}
+        -----------
+        ${this.gameBoard['2a']} |${this.gameBoard['2b']} |${this.gameBoard['2c']}
+        -----------
+        ${this.gameBoard['3a']} |${this.gameBoard['3b']} |${this.gameBoard['3c']} 
+     What's your next move?`)}
+    place(square) {
 
         this.gameBoard[square] =  this._currentTurn[this._currentTurn['XorO'].toString()]
         this._currentTurn['XorO'] = 1^this._currentTurn[ 'XorO']
-        console.clear()
-        this.displayBoard()
+
 
     }
 }
 ticTacToe()
-
