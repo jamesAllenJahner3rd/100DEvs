@@ -22,7 +22,7 @@ then ttt.restart() to play again.*/
 var ttt
 function ticTacToe(){
      ttt =  new TicTacToe();
-    ttt.displayBoard()
+    ttt.run()
 }
 class TicTacToe{
     constructor(){
@@ -49,7 +49,10 @@ class TicTacToe{
         (this._running == true )&& (console.log("The game is running already, Did you mean restart?"));
         if(this._running == false){
             this._running = true;
-            console.log("You started this game");
+            console.log("You started this game.")
+            this.displayBoard()
+            console.log("What's your move?")
+            console.log("type: ttt.restart(), ttt.end(),\n ttt.displayBoard(), or ttt.place ='1a' .etc")
         }
     }
     restart(){
@@ -64,22 +67,52 @@ class TicTacToe{
         (this._running == false)&& (console.log("The game isn't running already, Did you mean run?"));
         if (this._running == true ){
             this._running = false;
-            console.log("You restarted this game")
+            console.log("This game has ended.")
         };
     }
     displayBoard() {
-        console.log(` ${this.gameBoard['1a']} |${this.gameBoard['1b']} |${this.gameBoard['1c']} `);
-        console.log(` -----------`);
-        console.log(` ${this.gameBoard['2a']} |${this.gameBoard['2b']} |${this.gameBoard['2c']} `);
-        console.log(` -----------`);
-        console.log(` ${this.gameBoard['3a']} |${this.gameBoard['3b']} |${this.gameBoard['3c']} `);
-    }
+        if(this._running == true){
+            console.log(` ${this.gameBoard['1a']} |${this.gameBoard['1b']} |${this.gameBoard['1c']} `);
+            console.log(` -----------`);
+            console.log(` ${this.gameBoard['2a']} |${this.gameBoard['2b']} |${this.gameBoard['2c']} `);
+            console.log(` -----------`);
+            console.log(` ${this.gameBoard['3a']} |${this.gameBoard['3b']} |${this.gameBoard['3c']} `);
+    }}
     set  place(square) {
+        if(this._running == true){
+            if(this.gameBoard[square.toString()]){
+                if(this.gameBoard[square.toString()]=== square.toString() ){
+                    this.gameBoard[square] =  this._currentTurn[this._currentTurn['XorO'].toString()]
+                    console.clear()
+                    this.checkForWinner()
+                    
+                    this._currentTurn['XorO'] = 1^this._currentTurn[ 'XorO']
+                    
+                    this.displayBoard()
+                   
+                }else{
+                    console.log("That space is taken.")
+                }
+            }else{
+                alert("You miss typed.")
+            }
+            
+}
+    }
+    checkForWinner(){
+        
+                    /**logic
+                     * if all 1's, 2's, 3's, a's, b's, or c's are same
+                     * or if  1a,2b,3c or 1c,2b,3a*/
+        (this.gameBoard['1b'] === this.gameBoard['1a'] && this.gameBoard['1c'] === this.gameBoard['1a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['2b'] === this.gameBoard['2a'] && this.gameBoard['2c'] === this.gameBoard['2a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['3b'] === this.gameBoard['3a'] && this.gameBoard['3c'] === this.gameBoard['3a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['1a'] === this.gameBoard['2a'] && this.gameBoard['3a'] === this.gameBoard['2a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['1b'] === this.gameBoard['2b'] && this.gameBoard['3b'] === this.gameBoard['2b'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['1c'] === this.gameBoard['2c'] && this.gameBoard['3c'] === this.gameBoard['2c'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['1a'] === this.gameBoard['2b'] && this.gameBoard['3c'] === this.gameBoard['2b'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+        (this.gameBoard['1c'] === this.gameBoard['2b'] && this.gameBoard['3a'] === this.gameBoard['2b'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
 
-        this.gameBoard[square] =  this._currentTurn[this._currentTurn['XorO'].toString()]
-        this._currentTurn['XorO'] = 1^this._currentTurn[ 'XorO']
-        console.clear()
-        this.displayBoard()
 
     }
 }
