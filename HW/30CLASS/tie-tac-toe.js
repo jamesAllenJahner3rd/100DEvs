@@ -104,7 +104,7 @@ class TicTacToe{
                     /**logic
                      * if all 1's, 2's, 3's, a's, b's, or c's are same
                      * or if  1a,2b,3c or 1c,2b,3a*/
-        (this.gameBoard['1b'] === this.gameBoard['1a'] && this.gameBoard['1c'] === this.gameBoard['1a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
+       /* (this.gameBoard['1b'] === this.gameBoard['1a'] && this.gameBoard['1c'] === this.gameBoard['1a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
         (this.gameBoard['2b'] === this.gameBoard['2a'] && this.gameBoard['2c'] === this.gameBoard['2a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
         (this.gameBoard['3b'] === this.gameBoard['3a'] && this.gameBoard['3c'] === this.gameBoard['3a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
         (this.gameBoard['1a'] === this.gameBoard['2a'] && this.gameBoard['3a'] === this.gameBoard['2a'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
@@ -112,8 +112,28 @@ class TicTacToe{
         (this.gameBoard['1c'] === this.gameBoard['2c'] && this.gameBoard['3c'] === this.gameBoard['2c'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
         (this.gameBoard['1a'] === this.gameBoard['2b'] && this.gameBoard['3c'] === this.gameBoard['2b'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
         (this.gameBoard['1c'] === this.gameBoard['2b'] && this.gameBoard['3a'] === this.gameBoard['2b'])&& (console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)&& this.end());
-
-
+        */
+        const winnersMap = {
+            '0':['1a','1b','1c'],
+            '1':['2a','2b','2c'],
+            '2':['3a','3b','3c'],
+            '3':['1a','2a','3a'],
+            '4':['1b','2b','3b'],
+            '5':['1c','2c','3c'],
+            '6':['1a','2b','3c'],
+            '7':['3a','2b','1c']
+        }
+        for(const truthy in winnersMap){
+           
+            //console.log(winnersMap[truthy[0]][0],winnersMap[truthy[0]][1] ,winnersMap[truthy[0]][2]);
+           // console.log(this.gameBoard[winnersMap[truthy][0]]+ this.gameBoard[winnersMap[truthy][1] ]+this.gameBoard[winnersMap[truthy][2]])
+           // console.log(this.gameBoard[winnersMap[truthy][0]]=== this.gameBoard[winnersMap[truthy][1] ]===this.gameBoard[winnersMap[truthy][2]])
+            //console.log((this.gameBoard[winnersMap[truthy[0]][1] ] + this.gameBoard[winnersMap[truthy[0]][1] ]+ this.gameBoard[winnersMap[truthy[0]][1] ]))
+            if (this.gameBoard[winnersMap[truthy][0] ] === this.gameBoard[winnersMap[truthy][1] ]&&this.gameBoard[winnersMap[truthy][0] ]  === this.gameBoard[winnersMap[truthy][2]] ){
+                console.log(`${this._currentTurn[this._currentTurn['XorO'].toString()]} is the WINNER.`)
+                this.end()
+            }
+        }
     }
 }
 ticTacToe()
