@@ -48,7 +48,7 @@ class TicTacToe{
             '3c' : '3c'
         };
     };
-
+    
     run() {
         // starts the game, check if it's running and runs the displayboard for the 1st time
         (this._running == true )&& (console.log("The game is running already, Did you mean restart?"));
