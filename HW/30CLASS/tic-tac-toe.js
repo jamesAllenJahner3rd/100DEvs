@@ -36,7 +36,7 @@ class TicTacToe{
             '0':' X',
             '1':" O"
         };
-        this.gameBoard ={
+        (this.gameBoard) ={
             '1a' : '1a',
             '1b' : '1b',
             '1c' : '1c',

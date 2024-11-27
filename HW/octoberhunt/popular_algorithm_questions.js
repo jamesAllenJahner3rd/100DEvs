@@ -70,3 +70,18 @@ isPalindrome("Cigar? Toss it in a can. It is so tragic")
 
 // time complexity: linear
 //space complexity: constant.
+/**6. Anagrams
+Anagrams are words or phrases that contain the same number of characters. Create a function that checks for this.
+
+describe("Anagrams", () => {
+ it("Should implement anagrams", () => {
+  assert.equal(anagrams("hello world", "world hello"), true);
+  assert.equal(anagrams("hellow world", "hello there"), false);
+  assert.equal(anagrams("hellow world", "hello there!"), false);
+ });
+}); */
+/*
+prep
+parameter   two strings, yes punt,no num
+return  
+*/
