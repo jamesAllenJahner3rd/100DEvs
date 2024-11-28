@@ -1,0 +1,12 @@
+{
+  "name": "endcapapi",
+  "version": "1.0.0",
+  "description": "An api to get a list of products.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "James Jahner",
+  "license": "ISC"
+}
