@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "James Jahner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "normalize.css": "^8.0.1"
+  }
 }

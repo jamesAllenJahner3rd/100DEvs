@@ -5,7 +5,10 @@ const url = require("url");
 const querystring = require("querystring");
 const express = require("express");
 const app = express();
+const morgan = require('morgan')
 
+morgan.token('body', (req) => JSON.stringify(req.body));
+app.use(morgan('tiny'));
 
 let personList = [
     { 
@@ -29,28 +32,22 @@ let personList = [
       "number": "39-23-6423122"
     }
 ];
-let personList2 = [
-  { 
-    "id": "1",
-    "name": "Arto Hellas", 
-    "number": "040-123456"
-  },
-  { 
-    "id": "2",
-    "name": "Ada Lovelace", 
-    "number": "39-44-5323523"
-  },
-  { 
-    "id": "3",
-    "name": "Dan Abramov", 
-    "number": "12-43-234345"
-  },
-  { 
-    "id": "4",
-    "name": "Mary Poppendieck", 
-    "number": "39-23-6423122"
-  }
-];
+
+const requestLogger = (request, response, next) => {
+  console.log('Method:', request.method)
+  console.log('Path:  ', request.path)
+  console.log('Body:  ', request.body)
+  console.log('---')
+  next()
+}
+
+app.use(express.json())
+app.use(requestLogger)
+
+const unknownEndpoint = (request, response) => {
+  response.status(404).send({ error: 'unknown endpoint' })
+}
+
 app.get("/api/persons",(request,response) => {
     response.json(personList)
 })
@@ -74,9 +71,9 @@ app.delete("/api/persons/:id",(request,response)=>{
 })
 app.post("/api/persons",(request,response)=>{
   
-    const person = {"id": "4",
-    "name": "Mary Poppendieck", 
-    "number": "39-23-6423122"}
+    const person = {"id": `Math.random()*100`,
+    "name": "", 
+    "number": ""}
     if (person.name ===''){
       return response.status(400).send("Error: the name is missing.")
     }
@@ -90,7 +87,7 @@ app.post("/api/persons",(request,response)=>{
     response.json(personList)
 })
 
-
+app.use(unknownEndpoint)
 
 const PORT = 3001; 
 app.listen(PORT);

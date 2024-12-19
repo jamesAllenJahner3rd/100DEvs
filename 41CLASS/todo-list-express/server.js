@@ -14,10 +14,13 @@ let db,
 //process.env.DB_STRING is the protected information
     dbConnectionStr = process.env.DB_STRING,
     dbName = 'todo'
-
+//connects the server to the mongodb using the info in the.env; The option { useUnifiedTopology: true } is ensures compatibility with the latest MongoDB server versions.
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+//once connected
     .then(client => {
+        //log the string
         console.log(`Connected to ${dbName} Database`)
+        // assign db for the fist time to the to the reference for dbNamegit
         db = client.db(dbName)
     })
     
